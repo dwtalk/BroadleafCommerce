@@ -129,55 +129,11 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
             </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>license-maven-plugin</artifactId>
-                <version>1.5</version>
-                <configuration>
-                    <verbose>false</verbose>
-                    <addSvnKeyWords>false</addSvnKeyWords>
-                    <addJavaLicenseAfterPackage>false</addJavaLicenseAfterPackage>
-                    <organizationName>Broadleaf Commerce</organizationName>
-                    <inceptionYear>2009</inceptionYear>
-                    <licenseName>blc_apache</licenseName>
-                    <licenseResolver>file:${project.uri}/licenses</licenseResolver>
-                    <excludes>
-                        <exclude>**/*.sql</exclude>
-                        <exclude>**/*.html</exclude>
-                        <exclude>**/*font-awesome*</exclude>
-                        <exclude>**/*jquery*</exclude>
-                        <exclude>**/*modernizr*</exclude>
-                        <exclude>**/*responsive-tables*</exclude>
-                        <exclude>**/spectrum.css</exclude>
-                        <exclude>**/spectrum.js</exclude>
-                        <exclude>**/redactor.js</exclude>   
-                        <exclude>**/sitemap/**/*.xml</exclude>                       
-                    </excludes>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>first</id>
-                        <goals>
-                            <goal>update-file-header</goal>
-                            <goal>update-project-license</goal>
-                        </goals>
-                        <phase>process-sources</phase>
-                        <configuration>
-                            <roots>
-                                <root>src/main</root>
-                                <root>src/test</root>
-                            </roots>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
     <modules>
         <module>common</module>
         <module>core</module>
-        <module>integration</module>
-        <module>admin</module>
     </modules>
     <dependencies>
     </dependencies>
@@ -247,62 +203,6 @@
             <!--Broadleaf libraries -->
             <dependency>
                 <groupId>org.broadleafcommerce</groupId>
-                <artifactId>broadleaf-profile</artifactId>
-                <version>${project.version}</version>
-                <type>jar</type>
-                <scope>compile</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.broadleafcommerce</groupId>
-                <artifactId>broadleaf-profile-web</artifactId>
-                <version>${project.version}</version>
-                <type>jar</type>
-                <scope>compile</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.broadleafcommerce</groupId>
-                <artifactId>broadleaf-framework</artifactId>
-                <version>${project.version}</version>
-                <type>jar</type>
-                <scope>compile</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.broadleafcommerce</groupId>
-                <artifactId>broadleaf-framework-web</artifactId>
-                <version>${project.version}</version>
-                <type>jar</type>
-                <scope>compile</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.broadleafcommerce</groupId>
-                <artifactId>broadleaf-admin-module</artifactId>
-                <version>${project.version}</version>
-                <type>jar</type>
-                <scope>compile</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.broadleafcommerce</groupId>
-                <artifactId>broadleaf-contentmanagement-module</artifactId>
-                <version>${project.version}</version>
-                <type>jar</type>
-                <scope>compile</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.broadleafcommerce</groupId>
-                <artifactId>broadleaf-open-admin-platform</artifactId>
-                <version>${project.version}</version>
-                <type>jar</type>
-                <scope>compile</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.broadleafcommerce</groupId>
-                <artifactId>integration</artifactId>
-                <version>${project.version}</version>
-                <type>jar</type>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.broadleafcommerce</groupId>
                 <artifactId>broadleaf-common</artifactId>
                 <version>${project.version}</version>
                 <type>jar</type>
@@ -311,6 +211,21 @@
             <dependency>
                 <groupId>org.broadleafcommerce</groupId>
                 <artifactId>broadleaf-common</artifactId>
+                <version>${project.version}</version>
+                <classifier>tests</classifier>
+                <type>jar</type>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.broadleafcommerce</groupId>
+                <artifactId>broadleaf-core</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.broadleafcommerce</groupId>
+                <artifactId>broadleaf-core</artifactId>
                 <version>${project.version}</version>
                 <classifier>tests</classifier>
                 <type>jar</type>

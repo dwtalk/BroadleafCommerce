@@ -19,10 +19,10 @@
  */
 package org.broadleafcommerce.common.time;
 
-import junit.framework.TestCase;
-
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+
+import junit.framework.TestCase;
 
 import static org.easymock.EasyMock.createMock;
 import static org.easymock.EasyMock.expect;

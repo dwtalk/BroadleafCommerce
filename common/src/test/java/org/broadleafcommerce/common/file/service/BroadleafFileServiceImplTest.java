@@ -19,12 +19,12 @@
  */
 package org.broadleafcommerce.common.file.service;
 
-import org.broadleafcommerce.common.file.domain.FileWorkArea;
-
 import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.broadleafcommerce.common.file.domain.FileWorkArea;
 
 import junit.framework.TestCase;
 

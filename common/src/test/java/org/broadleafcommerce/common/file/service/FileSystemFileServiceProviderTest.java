@@ -19,11 +19,11 @@
  */
 package org.broadleafcommerce.common.file.service;
 
+import java.io.File;
+
 import org.broadleafcommerce.common.site.domain.Site;
 import org.broadleafcommerce.common.site.domain.SiteImpl;
 import org.broadleafcommerce.common.web.BroadleafRequestContext;
-
-import java.io.File;
 
 import junit.framework.TestCase;
 

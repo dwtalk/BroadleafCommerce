@@ -19,11 +19,12 @@
  */
 package org.springframework.orm.jpa.persistenceunit;
 
-import org.springframework.util.ClassUtils;
-
-import javax.persistence.spi.PersistenceUnitInfo;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
+
+import javax.persistence.spi.PersistenceUnitInfo;
+
+import org.springframework.util.ClassUtils;
 
 /**
  * Decorator that exposes a JPA 2.0 compliant PersistenceUnitInfo interface for a
